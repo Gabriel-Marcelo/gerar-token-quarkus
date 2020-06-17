@@ -32,8 +32,8 @@ public class TokenUtils {
     public static String generateTokenString(String jsonResName, Map<String, Long> timeClaims)
             throws Exception {
         // Use the test private key associated with the test public key for a valid signature
-        PrivateKey pk = readPrivateKey("/src/main/privateKey.pem");
-        return generateTokenString(pk, "/src/main/privateKey.pem", jsonResName, timeClaims);
+        PrivateKey pk = readPrivateKey("/privateKey.pem");
+        return generateTokenString(pk, "/privateKey.pem", jsonResName, timeClaims);
     }
 
     public static String generateTokenString(PrivateKey privateKey, String kid,
